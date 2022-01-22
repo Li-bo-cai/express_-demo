@@ -1,0 +1,13 @@
+ul li {
+    list-style: none;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    background: #ccc;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+a{
+    color: red;
+}

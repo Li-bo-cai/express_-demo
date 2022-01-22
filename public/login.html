@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./socket.io.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        用户名：
+        <input class="userName" type="text" placeholder="用户名">
+        密码：
+        <input class="passWord" type="text" placeholder="密码">
+    </div>
+    <button id="login_btn">登录</button>
+
+    <script>
+        var socket = io();
+
+        let loginBtn = document.querySelector('#login_btn');
+        loginBtn.addEventListener('click', () => {
+            let name = document.querySelector('.userName').value;
+            let pwd = document.querySelector('.passWord').value;
+            // 登录页面链接
+            axios.post('/login', { name, pwd }).then(res => {
+                // console.log(res);
+                if (res.data.code == 1) {
+                    sessionStorage.setItem('name', res.data.data.name)
+                    sessionStorage.setItem('id', res.data.data.id)
+                    location.href = './separate.html'
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

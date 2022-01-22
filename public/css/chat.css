@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    margin: 5px 5px;
+}
+ul li span{
+    display: inline-block;
+    background: rgb(78, 169, 255);
+    padding: 5px 12px;
+    border-radius: 11px;
+}
+.chat-box{
+    width: 75%;
+    /* min-height: 300px; */
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+.head{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background-color: rgb(78, 169, 255);
+}
+.chat-msg-box{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.chat-msg{
+    /* height: 100%; */
+    height: 400px;
+    overflow-y: scroll;
+}
+.send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    background: rgb(170, 170, 170);
+}
+.send > input{
+    /* width: 100%; */
+    flex: 1;
+    height: 22px;
+    margin: 0 20px;
+    border-radius: 11px;
+    border: 0;
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    outline:0;
+    text-indent: 1em;
+}
+input:focus {
+    border: 1px solid rgb(48, 118, 250);
+    border-radius: 11px;
+}
+.send > button{
+    width: 44px;
+    height: 22px;
+    line-height: 22px;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(48, 118, 250);
+    border-radius: 11px;
+    margin-right: 20px;
+    border: 1px #fff;
+}
+.style_send {
+    text-align: right;
+}
+
+.style_on {
+    text-align: left;
+}
